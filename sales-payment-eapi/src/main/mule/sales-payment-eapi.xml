@@ -9,6 +9,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="sales-payment-eapiFlow" doc:id="56052ef5-9f4b-4ad8-a8a5-98a501213e1b" >
 		<http:listener doc:name="Listener" doc:id="34087fe6-3d6e-4dfd-ac84-e1ee6ec47636" config-ref="HTTP_Listener_config" path="/employees"/>
-		<logger level="INFO" doc:name="Logger" doc:id="b699ea1a-d948-49c5-a1d9-64b98d3e6f19" message="#[payload]"/>
+		<logger level="INFO" doc:name="Logger" doc:id="b699ea1a-d948-49c5-a1d9-64b98d3e6f19" message='#[payload ++ "abiy"]'/>
 	</flow>
 </mule>
